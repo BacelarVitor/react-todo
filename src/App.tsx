@@ -1,4 +1,5 @@
 import { Header } from './Header';
+import { Input } from './Input';
 import styles from './App.module.css';
 import './global.css'
 
@@ -8,6 +9,7 @@ function App() {
       <>
         <Header />
         <div className={styles.wrapper}>
+          <Input />
         </div>
       </>
   )
