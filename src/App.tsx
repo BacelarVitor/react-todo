@@ -11,7 +11,9 @@ function App() {
         <Header />
         <div className={styles.wrapper}>
           <Input />
-          <TodoList />
+          <main>
+            <TodoList />
+          </main>
         </div>
       </>
   )

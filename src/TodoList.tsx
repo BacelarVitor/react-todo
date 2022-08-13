@@ -3,7 +3,7 @@ import styles from './TodoList.module.css'
 
 export function TodoList() {
     return (
-        <div className={styles.main}>
+        <div className={styles.wrapper}>
             <div className={styles.info}>    
                 <p>Tarefas criadas <span>0</span></p>
                 <p>Concluídas <span>0</span></p>

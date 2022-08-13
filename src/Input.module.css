@@ -1,14 +1,13 @@
 .form {
     width: 100%;
-    max-width: 46rem;
     gap: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    /*
     position: absolute;
     top: 11.68rem;
-
+    */
 }
 .input {
     padding: 1rem;

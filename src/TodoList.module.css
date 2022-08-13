@@ -1,12 +1,17 @@
-.main {
-    display: flex;
+.wrapper{
+    display: grid;   
     align-items: center;
-    justify-content: start;
-    max-width: 40rem;
     width: 100%;
 }
 
 .info {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+.content {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }

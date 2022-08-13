@@ -1,6 +1,6 @@
 .wrapper {
-    display: flex;
-    justify-content: center;
+    max-width: 46rem;
+    display: grip;
     align-items: center;
-    height: 100vw;
+    margin: auto;
 }
