@@ -12,7 +12,7 @@ export function Input() {
             <button 
                 type="submit" 
                 className={styles.button}>
-                    Criar {' '}
+                    Criar 
                     <PlusCircle size={16} />
             </button>
         </form>

@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    max-width: 40rem;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
