@@ -1,4 +1,3 @@
-import { ClipboardText } from 'phosphor-react'
 import styles from './TodoList.module.css'
 
 export function TodoList() {
