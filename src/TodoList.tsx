@@ -8,11 +8,14 @@ export function TodoList() {
                 <p>Tarefas criadas <span>0</span></p>
                 <p>Concluídas <span>0</span></p>
             </div>
-            <main>
-                <div>
-                    <ClipboardText size={32} />
-                </div> 
-            </main>
+            <div className={styles.empty}>
+                <span>
+                    Você ainda não tem tarefas cadastradas
+                </span>
+                <span>
+                    Crie tarefas e organize seus itens a fazer
+                </span>
+            </div> 
         </div>
     )
 }

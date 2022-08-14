@@ -2,16 +2,39 @@
     display: grid;   
     align-items: center;
     width: 100%;
+    gap: 1.5rem;
+    margin-top: 4rem;
 }
 
 .info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
 }
 
-.content {
+.info p:nth-child(2) {
+    color: var(--purple-300);
+}
+
+.empty {
     display: flex; 
     justify-content: center;
     align-items: center;
+    background: url(assets/clipboard.svg) no-repeat center;
+    height: 15.25rem;
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+.empty span {
+    display: block;
+    line-height: 1.4rem;
+    color: var(--gray-300);
+}
+
+.empty span:nth-child(1) {
+    font-weight: bold;
+    padding-top: 8.5rem;
 }
