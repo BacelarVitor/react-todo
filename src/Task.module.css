@@ -6,4 +6,27 @@
     background: var(--gray-500);
 
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task {
+    font-size: 0.875rem;
+    color: var(--gray-100);
+    line-height: 140%;
+}
+
+.task label {
+    padding: 0 0.75rem;
+}
+
+.task input[type="checkbox"]:checked + label {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.trash {
+    color: var(--gray-300);
 }

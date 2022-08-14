@@ -20,6 +20,13 @@
 
 .info p:nth-child(2) {
     color: var(--purple-300);
+} 
+
+.tasks {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .empty {
