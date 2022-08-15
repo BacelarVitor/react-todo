@@ -41,6 +41,14 @@ function App() {
 
     setTasks([...tasks, newTask])
   }
+
+  function checkTask(taskId: number) {
+    const taskChecked = tasks.find(task => task.id === taskId);
+    if(taskChecked) {
+      taskChecked.isDone = !taskChecked.isDone
+      setTasks([...tasks])
+    }
+  }
   
   return (
       <>
@@ -48,7 +56,7 @@ function App() {
         <div className={styles.wrapper}>
           <Input onCreateTask={handleNewTask} />
           <main>
-            <TodoList tasks={tasks} />
+            <TodoList tasks={tasks} handleCheckTask={checkTask}/>
           </main>
         </div>
       </>

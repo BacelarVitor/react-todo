@@ -3,10 +3,11 @@ import { Task } from './Task'
 import styles from './TodoList.module.css'
 
 interface TodoListProps {
-    tasks: ITask[]
+    tasks: ITask[],
+    handleCheckTask: (taskId: number) => void; 
 }
 
-export function TodoList({ tasks }: TodoListProps) {
+export function TodoList({ tasks, handleCheckTask }: TodoListProps) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.info}>    
@@ -15,7 +16,7 @@ export function TodoList({ tasks }: TodoListProps) {
             </div>
             <div className={styles.tasks}>
                 {tasks.map(task => {
-                    return <Task task={task} />
+                    return <Task task={task} key={task.id} onCheckTask={handleCheckTask} />
                 })}
             </div>
             {/*
