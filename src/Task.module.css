@@ -27,6 +27,11 @@
     text-decoration: line-through;
 }
 
+.wrapper button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
 .trash {
     color: var(--gray-300);
 }

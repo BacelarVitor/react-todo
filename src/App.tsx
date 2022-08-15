@@ -49,14 +49,18 @@ function App() {
       setTasks([...tasks])
     }
   }
-  
+  function deleteTask(taskId: number) {
+    const tasksUpdated = tasks.filter(task => task.id !== taskId)
+    setTasks([...tasksUpdated])
+  }
+
   return (
       <>
         <Header />
         <div className={styles.wrapper}>
           <Input onCreateTask={handleNewTask} />
           <main>
-            <TodoList tasks={tasks} handleCheckTask={checkTask}/>
+            <TodoList tasks={tasks} handleCheckTask={checkTask} handleDeleteTask={deleteTask} />
           </main>
         </div>
       </>
