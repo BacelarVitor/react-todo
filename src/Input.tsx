@@ -1,24 +1,34 @@
 import styles from './Input.module.css'
 
 import { PlusCircle } from 'phosphor-react'
-import { FormEventHandler } from 'react';
+import React, {  useState } from 'react';
 
 interface InputProps {
-    onCreateTask: () => string;
+    onCreateTask: (task: string) => void;
 }
 
 export function Input({ onCreateTask }: InputProps) {
-    function createTask(event: FormEventHandler<HTMLElement>) {
-        event.preventDefault();
+    const [newTask, setNewTaskText] = useState<string>('');
 
-        console.log(event);
+
+    function handleCreateTask(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        onCreateTask(newTask);
+        setNewTaskText('');
     }
 
+    function handleNewTaskTextChange(event: React.ChangeEvent<HTMLInputElement>) {
+        event.target.setCustomValidity('');
+        setNewTaskText(event.target.value);
+    } 
+
     return (
-        <form onSubmit={createTask} className={styles.form}>
+        <form onSubmit={handleCreateTask} className={styles.form}>
             <input 
                 className={styles.input} 
                 required
+                value={newTask}
+                onChange={handleNewTaskTextChange}
                 placeholder="Adicione uma nova tarefa" />
             
             <button 
