@@ -19,10 +19,24 @@
 }
 
 .task label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task .labelText {
     padding: 0 0.75rem;
 }
 
-.task input[type="checkbox"]:checked + label {
+.task input[type="checkbox"] {
+    display: none;
+}
+
+.task .checkIcon {
+    color: var(--blue-300)
+}
+
+.task label input[type="checkbox"]:checked  + .checkIcon + .labelText {
     color: var(--gray-300);
     text-decoration: line-through;
 }
