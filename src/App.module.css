@@ -1,6 +1,21 @@
 .wrapper {
     max-width: 46rem;
-    display: grip;
+    display: grid;
     align-items: center;
     margin: auto;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+    .wrapper {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 90%;
+    }
 }

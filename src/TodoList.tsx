@@ -14,8 +14,7 @@ export function TodoList({ tasks, handleCheckTask, handleDeleteTask }: TodoListP
             <div className={styles.info}>    
                 <p>Tarefas criadas <span>{tasks.length}</span></p>
                 <p>
-                    Concluídas 
-                    <span>
+                    Concluídas <span>
                         {tasks.filter(t => t.isDone)?.length + ' de ' + tasks.length}
                     </span>
                 </p>
